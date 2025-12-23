@@ -1,4 +1,4 @@
-# 🚗 Used Cars Price Prediction | Cars4U
+# 🚗 Explatory Data Analysis and ML models for Used Car Price Prediction
 
 ## 📋 Project Overview
 This project aims to solve the pricing volatility in the Indian pre-owned car market for **Cars4U**, a budding tech start-up. Unlike new cars, used car pricing is non-deterministic. By leveraging machine learning, I developed a model to predict vehicle prices accurately, allowing for data-driven acquisition and sales strategies.
@@ -30,4 +30,4 @@ The **Linear Regression model** was selected as the best-performing algorithm du
 ## 🛠️ Tech Stack
 * **Language:** Python
 * **Analysis:** Pandas, NumPy, Matplotlib, Seaborn
-* **Modeling:** Scikit-learn, Statsmodels (OLS Regression)
+* **Modeling:** Scikit-learn, Statsmodels (OLS Regression), Linear Regression, Decision Tree, Random Forest, Hyperparameter Tuning

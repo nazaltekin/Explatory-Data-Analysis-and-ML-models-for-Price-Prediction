@@ -9,6 +9,20 @@ To build a robust pricing model that:
 2.  **Identifies** key drivers of vehicle value to support differential pricing.
 3.  **Optimizes** inventory acquisition by identifying underpriced market listings.
 
+## 🛠️ Methodology
+The project followed a structured Data Science lifecycle:
+1. **Data Cleaning:** Handled missing values (specifically in `New_Price` and `Seats`) and performed unit conversions for `Mileage`, `Engine`, and `Power`.
+2. **Exploratory Data Analysis (EDA):** Analyzed price distributions and feature correlations. Identified the need for **log-transformations** on `Price` and `Kilometers_Driven` to handle right-skewed data.
+3. **Feature Engineering:** Extracted `Brand` from the car name, calculated vehicle age, and applied categorical encoding to `Location`, `Fuel_Type`, and `Transmission`.
+4. **Model Building:** Developed a **Linear Regression** model using both `Scikit-Learn` and `Statsmodels` for predictive accuracy and statistical inference.
+5. **Statistical Validation:** Utilized **OLS Regression** summaries to check for p-values, multicollinearity (VIF), and residual analysis.
+
+## 🛠️ Tech Stack
+* **Language:** Python
+* **Analysis:** Pandas, NumPy, Matplotlib, Seaborn
+* **Modeling:** Scikit-learn, Statsmodels (OLS Regression), Linear Regression, Decision Tree, Random Forest, Hyperparameter Tuning
+* **Statistical Techniques:** Log Transformation, Feature Scaling, Multicollinearity Analysis
+
 ## 📊 Key Findings & Model Performance
 The **Linear Regression model** was selected as the best-performing algorithm due to its high explainability and strong performance metrics:
 * **Accuracy:** Explains **~94.75%** of the variance in training data and **~89.57%** in test data.
@@ -26,8 +40,3 @@ The **Linear Regression model** was selected as the best-performing algorithm du
 1.  **Arbitrage Opportunity:** Use the model to identify "underpriced" cars (where market price < predicted price) for high-margin acquisition.
 2.  **Inventory Redistribution:** Leverage geographical price variances. The data shows cities like **Coimbatore and Bangalore** have higher price coefficients than Kolkata or Jaipur. Cars4U should consider transferring inventory to these high-demand locations to maximize ROI.
 3.  **Risk Mitigation:** Prevent overpayment for inventory with high "hidden" depreciation factors identified by the model (e.g., high mileage combined with multiple owners).
-
-## 🛠️ Tech Stack
-* **Language:** Python
-* **Analysis:** Pandas, NumPy, Matplotlib, Seaborn
-* **Modeling:** Scikit-learn, Statsmodels (OLS Regression), Linear Regression, Decision Tree, Random Forest, Hyperparameter Tuning
